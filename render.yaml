@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: flask-api
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    envVars:
+      - key: JWT_SECRET_KEY
+        value: super-secret-key
